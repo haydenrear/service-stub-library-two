@@ -8,11 +8,11 @@
         <version>2.5.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.hayden</groupId>
-    <artifactId>service-stub-library-two</artifactId>
+    <groupId>com.hayden.service-stub</groupId>
+    <artifactId>service-stub-library</artifactId>
     <version>1.0.0</version>
-    <name>service-stub-library-two</name>
-    <description>service-stub-library-two</description>
+    <name>service-stub-library</name>
+    <description>service-stub-library</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -39,6 +39,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <classifier>
+                        exec
+                    </classifier>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -46,6 +49,11 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
             </plugin>
         </plugins>
     </build>
