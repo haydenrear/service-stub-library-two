@@ -9,4 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface ServiceStub {
     Class<?> value();
+    String profile();
 }
